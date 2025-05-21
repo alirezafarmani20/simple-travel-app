@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project2/core/theme/color.dart';
+import 'package:get/get.dart';
+import 'package:project2/screens/home/home_screen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({super.key});
@@ -39,9 +41,19 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               width: MediaQuery.of(context).size.width,
               height: 52,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Get.to(()=>HomeScreen());
+                },
                 style: TextButton.styleFrom(
                   backgroundColor: AppColor.primary,
+                  side: BorderSide(
+                    color: AppColor.primary,
+                    style: BorderStyle.solid,
+                    width: 1,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
                 ),
                 child: Text(
                   "Get Started",
@@ -52,7 +64,32 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
-            
+            SizedBox(height: 10),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 52,
+              child: TextButton(
+                onPressed: () {},
+                style: TextButton.styleFrom(
+                  backgroundColor: AppColor.backGround,
+                  side: BorderSide(
+                    color: AppColor.primary,
+                    style: BorderStyle.solid,
+                    width: 1,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+                child: Text(
+                  "Login",
+                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: AppColor.primary,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
