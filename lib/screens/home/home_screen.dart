@@ -14,12 +14,12 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(14),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Padding(
+              padding: EdgeInsets.all(14),
+              child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
@@ -35,16 +35,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  const Image(image: AssetImage("lib/assets/images/profile.png")),
+                  const Image(
+                    image: AssetImage("lib/assets/images/profile.png"),
+                  ),
                 ],
               ),
-              //show search input
-              SearchInputWidget(),
-              SizedBox(height: 10,),
-              // show category list
-              CategoryWidget()
-            ],
-          ),
+            ),
+            //show search input
+            SearchInputWidget(),
+            SizedBox(height: 10),
+            // show category list
+            CategoryWidget(),
+          ],
         ),
       ),
     );
