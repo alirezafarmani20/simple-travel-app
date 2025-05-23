@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project2/widgets/category_widget.dart';
 import 'package:project2/widgets/search_input_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -37,7 +38,11 @@ class _HomeScreenState extends State<HomeScreen> {
                   const Image(image: AssetImage("lib/assets/images/profile.png")),
                 ],
               ),
-              SearchInputWidget()
+              //show search input
+              SearchInputWidget(),
+              SizedBox(height: 10,),
+              // show category list
+              CategoryWidget()
             ],
           ),
         ),
