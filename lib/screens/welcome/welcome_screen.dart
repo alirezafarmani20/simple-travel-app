@@ -14,6 +14,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(backgroundColor: AppColor.backGround),
       body: Padding(
         padding: EdgeInsets.all(14),
         child: Column(
@@ -42,7 +43,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               height: 52,
               child: TextButton(
                 onPressed: () {
-                  Get.to(()=>HomeScreen());
+                  Get.to(() => HomeScreen());
                 },
                 style: TextButton.styleFrom(
                   backgroundColor: AppColor.primary,
@@ -64,7 +65,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height: 52,
