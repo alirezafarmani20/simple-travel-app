@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // show category list
             CategoryWidget(),
             // show popular exprience list
-            PopularExperiencesWidget()
+            PopularExperiencesWidget(),
           ],
         ),
       ),
